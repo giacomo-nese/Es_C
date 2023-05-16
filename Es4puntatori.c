@@ -32,7 +32,7 @@ int Inserimento(int numeri[])
     {
         printf("Inserisci un numero intero positivo \n");
         scanf("%d", &numero);
-        if (numero > 0)
+        if (numero >= 0)
         {
             numeri[i] = numero;
             i++;
@@ -164,7 +164,7 @@ int Funzionalita(int numeri[], int sceltaUtente, int *puntatore)
     switch (sceltaUtente)
     {
     case 1:
-        Stampa(numeri, *puntatore);
+        Stampa(numeri, *puntatore); // Passo il contenuto del puntatore perchè non vado a modificarlo
         break;
     case 2:
         printf("Inserisci un numero in coda: \n");
@@ -196,7 +196,7 @@ int Funzionalita(int numeri[], int sceltaUtente, int *puntatore)
         }
         else
         {
-            printf("ERRORE, il numero non è presente");
+            printf("ERRORE, il numero non è presente \n");
         }
         break;
     case 5:
